@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27009.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspCoreAngular2", "AspCoreAngular2\AspCoreAngular2.csproj", "{269E02BD-BADA-442C-8C3C-C502B27F7B20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheWorld", "..\..\..\..\Desktop\Habijabi\MVC Core\TheWorld\TheWorld\TheWorld.csproj", "{522A96E3-57D4-439F-BF83-2F28329D91CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorld", "TheWorld\TheWorld.csproj", "{E0104AFD-E00B-413F-ABAC-F3D085102054}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{269E02BD-BADA-442C-8C3C-C502B27F7B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{269E02BD-BADA-442C-8C3C-C502B27F7B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{269E02BD-BADA-442C-8C3C-C502B27F7B20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{522A96E3-57D4-439F-BF83-2F28329D91CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{522A96E3-57D4-439F-BF83-2F28329D91CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{522A96E3-57D4-439F-BF83-2F28329D91CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{522A96E3-57D4-439F-BF83-2F28329D91CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
