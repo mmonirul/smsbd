@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27009.1
+VisualStudioVersion = 15.0.27019.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspCoreAngular2", "AspCoreAngular2\AspCoreAngular2.csproj", "{269E02BD-BADA-442C-8C3C-C502B27F7B20}"
 EndProject

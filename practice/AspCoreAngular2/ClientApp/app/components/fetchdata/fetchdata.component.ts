@@ -24,7 +24,7 @@ export class FetchDataComponent {
 
 
         http.get('http://localhost:50008/api/trips').subscribe(result => {
-            console.log(result);
+            console.log(result.json());
         }, error => console.error(error));
 
         http.get('http://date.jsontest.com', { headers: this.headers}).subscribe(result => {
