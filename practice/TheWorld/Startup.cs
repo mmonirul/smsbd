@@ -47,6 +47,15 @@ namespace TheWorld
             services.AddScoped<IWorldRepository, WorldRepository>();
             services.AddTransient<WorldContextSeedData>();
             services.AddLogging();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                    });
+            });
             services.AddMvc()
                 .AddJsonOptions(options =>
                 {
@@ -71,6 +80,9 @@ namespace TheWorld
                 loggerFactory.AddDebug(LogLevel.Error);
             }
             app.UseStaticFiles();
+
+            // Shows UseCors with named policy.
+            app.UseCors("AllowAllOrigins");
 
             app.UseMvc(config => {
                 config.MapRoute(

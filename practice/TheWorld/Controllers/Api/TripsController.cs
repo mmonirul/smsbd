@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,6 +13,7 @@ using TheWorld.ViewModels;
 namespace TheWorld.Controllers.Api
 {
     [Route("api/trips")]
+    [EnableCors("AllowAllOrigins")]
     public class TripsController : ControllerBase
     {
         private ILogger<TripsController> _logger;
@@ -23,6 +25,7 @@ namespace TheWorld.Controllers.Api
             _repository = repository;
         }
         [HttpGet("")]
+        [EnableCors("AllowAllOrigins")]
         public IActionResult Get()
         {
             try

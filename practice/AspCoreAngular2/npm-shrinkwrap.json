@@ -12,6 +12,14 @@
         "tslib": "1.7.1"
       }
     },
+    "@angular/cdk": {
+      "version": "2.0.0-beta.12",
+      "resolved": "https://registry.npmjs.org/@angular/cdk/-/cdk-2.0.0-beta.12.tgz",
+      "integrity": "sha1-OiQ8tiuT9OA5EgunD5ANyeI1Yi4=",
+      "requires": {
+        "tslib": "1.7.1"
+      }
+    },
     "@angular/common": {
       "version": "4.2.5",
       "resolved": "https://registry.npmjs.org/@angular/common/-/common-4.2.5.tgz",
@@ -65,6 +73,14 @@
       "version": "4.2.5",
       "resolved": "https://registry.npmjs.org/@angular/http/-/http-4.2.5.tgz",
       "integrity": "sha1-P/+OXPjogmK6zRyZYwQxLDxaOu8=",
+      "requires": {
+        "tslib": "1.7.1"
+      }
+    },
+    "@angular/material": {
+      "version": "2.0.0-beta.12",
+      "resolved": "https://registry.npmjs.org/@angular/material/-/material-2.0.0-beta.12.tgz",
+      "integrity": "sha1-cbbQt7AhiR5dDjaIwdS9eMdFf1g=",
       "requires": {
         "tslib": "1.7.1"
       }
@@ -5873,11 +5889,6 @@
         "media-typer": "0.3.0",
         "mime-types": "2.1.15"
       }
-    },
-    "typescript": {
-      "version": "2.4.1",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-2.4.1.tgz",
-      "integrity": "sha1-w8yxbdqgsjFN4DHn5v7onlujRrw="
     },
     "uglify-js": {
       "version": "3.0.23",
