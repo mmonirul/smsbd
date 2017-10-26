@@ -1,4 +1,4 @@
-<div class='container-fluid'>
+<!--<div class='container-fluid'>
     <div class='row'>
         <div class='col-sm-3'>
             <nav-menu></nav-menu>
@@ -7,4 +7,78 @@
             <router-outlet></router-outlet>
         </div>
     </div>
+</div>-->
+
+<div class="page home-page">
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="search-box">
+                <button class="dismiss"><i class="icon-close"></i></button>
+                <form id="searchForm" action="#" role="search">
+                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                </form>
+            </div>
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-end">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand -->
+                        <a href="/" class="navbar-brand">
+                            <div class="brand-text brand-big hidden-lg-down"><span>Hello</span><strong>World</strong></div>
+                            <div class="brand-text brand-small"><strong>MS</strong></div>
+                        </a>
+                        <!-- Toggle Button-->
+                        <a id="toggle-btn" href="javascript:void(0)" class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center" style="position:absolute!important; right:0!important;">
+                        <!-- Search-->
+                        <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                        <!-- Logout    -->
+                        <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+
+        <nav class="side-navbar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="../../../../wwwroot/lib/bootstrap-4-material-admin/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                <div class="title">
+                    <h1 class="h4">Mark Stephen</h1>
+                    <p>Web Designer</p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+   
+                 <nav-menu></nav-menu>
+              
+            </ul>
+            <span class="heading">Extras</span>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#"><i class="icon-picture"></i> About</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-mail"></i> Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+
+            <router-outlet></router-outlet>
+
+        </div>
+    </div>
 </div>
+
+

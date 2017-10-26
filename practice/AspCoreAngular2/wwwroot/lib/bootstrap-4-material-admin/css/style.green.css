@@ -1492,42 +1492,6 @@ section.charts div[class*="col-"] {
 *     FORM ELEMENTS
 * ==========================================================
 */
-.form-control {
-  border: 1px solid #e6e6e6;
-  border-radius: 0;
-  padding: 10px 15px;
-}
-
-.form-control::-moz-placeholder {
-  font-size: 0.9em;
-  font-weight: 300;
-  font-family: "Poppins", sans-serif;
-  color: #aaa;
-}
-
-.form-control::-webkit-input-placeholder {
-  font-size: 0.9em;
-  font-weight: 300;
-  font-family: "Poppins", sans-serif;
-  color: #aaa;
-}
-
-.form-control:-ms-input-placeholder {
-  font-size: 0.9em;
-  font-weight: 300;
-  font-family: "Poppins", sans-serif;
-  color: #aaa;
-}
-
-.form-control:focus {
-  border-color: #33b35a;
-}
-
-.form-control-label {
-  color: #777;
-  font-weight: 300;
-}
-
 button, input[type='submit'] {
   cursor: pointer;
   font-family: inherit;
@@ -2004,34 +1968,6 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #33b35a;
-  border-color: #33b35a;
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: #288b46;
-  border-color: #258342;
-}
-
-.btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 2px rgba(51, 179, 90, 0.5);
-}
-
-.btn-primary.disabled, .btn-primary:disabled {
-  background-color: #33b35a;
-  border-color: #33b35a;
-}
-
-.btn-primary:active, .btn-primary.active,
-.show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #288b46;
-  background-image: none;
-  border-color: #258342;
-}
 
 .btn-secondary {
   color: #292b2c;

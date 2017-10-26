@@ -1,11 +1,104 @@
-<h1>Counter</h1>
 
-<p>This is a simple example of an Angular component.</p>
+<header class="page-header">
+    <div class="container-fluid">
+        <h2 class="no-margin-bottom">Counter</h2>
+    </div>
+</header>
 
-<p>Current count: <strong>{{ currentCount }}</strong></p>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>This is a simple example of an Angular component.</p>
+
+                <p>Current count: <strong>{{ currentCount }}</strong></p>
+
+                <button class="btn btn-success" (click)="incrementCounter()"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Increment</button>
+                <button class="btn btn-primary" (click)="decrementCounter()"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Dcrement </button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-2">
+                <span class="badge badge-default">Default</span>
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-success">Success</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-danger">Danger</span>
+
+                <hr />
+                <span class="badge badge-pill badge-default">Default</span>
+                <span class="badge badge-pill badge-primary">Primary</span>
+                <span class="badge badge-pill badge-success">Success</span>
+                <span class="badge badge-pill badge-info">Info</span>
+                <span class="badge badge-pill badge-warning">Warning</span>
+                <span class="badge badge-pill badge-danger">Danger</span>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-offset-3 col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Hate it</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Product name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Love it</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button>
 
 
-<button class="btn btn-success" (click)="incrementCounter()"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Increment</button>
-<button class="btn btn-primary" (click)="decrementCounter()"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Dcrement</button>
+            </div>
 
+        </div>
+    </div>
+</section>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

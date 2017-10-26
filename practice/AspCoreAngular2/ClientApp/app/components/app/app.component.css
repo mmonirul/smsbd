@@ -5,3 +5,8 @@
         padding-top: 50px;
     }
 }
+
+/*Overrid default*/
+.form-control:focus {
+    box-shadow: 0 0 0 0.051rem rgba(0,123,255,.25)!important;
+}

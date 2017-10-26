@@ -8,10 +8,51 @@
 
     <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- custome Bootstrap CSS-->
+    @*<link href="~/lib/bootstrap-4-material-admin/css/bootstrap.min.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link href="~/lib/bootstrap-4-material-admin/css/style.green.css" rel="stylesheet" />
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+    <!-- Font Icons CSS-->
+    <link rel="stylesheet" href="https://file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+    <link href="~/lib/bootstrap-4-material-admin/css/sticky-footer.css" rel="stylesheet" />
+
 </head>
 <body>
     @RenderBody()
 
     @RenderSection("scripts", required: false)
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>Your company &copy; 2017-2019</span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <span>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></span>
+                    <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="~/lib/bootstrap-4-material-admin/js/tether.min.js"></script>
+
+    <script src="~/lib/bootstrap-4-material-admin/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap-4-material-admin/js/jquery.cookie.js"></script>
+    <script src="~/lib/bootstrap-4-material-admin/js/jquery.validate.min.js"></script>
+    <script src="~/lib/bootstrap-4-material-admin/js/front.js"></script>
+
 </body>
 </html>
