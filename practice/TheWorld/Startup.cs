@@ -15,6 +15,8 @@ using AutoMapper;
 using TheWorld.ViewModels;
 using TheWorld.Common;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.PlatformAbstractions;
+using System.IO;
 
 namespace TheWorld
 {
@@ -46,7 +48,11 @@ namespace TheWorld
 
             services.AddDbContext<WorldContext>();
             services.AddScoped<IWorldRepository, WorldRepository>();
+
+            services.AddTransient<GeoCoordsService>();
+
             services.AddTransient<WorldContextSeedData>();
+
             services.AddLogging();
 
             services.AddCors(options =>
@@ -68,9 +74,13 @@ namespace TheWorld
                     Title = "Hello world", Version = "v1",
                     Description = "A simple example ASP.NET Core Web API",
                     TermsOfService = "None",
-                    Contact = new Contact { Name = "Ami", Email = "", Url = "https://adocka.com/aboutus" },
+                    Contact = new Contact { Name = "Ami", Email = "", Url = "https://www.adocka.com/om_oss" },
                     License = new License { Name = "Use under LICX", Url = "https://example.com/license" }
                 });
+                // Set the comments path for the Swagger JSON and UI.
+                //var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                //var xmlPath = Path.Combine(basePath, "TheWorld.xml");
+                //c.IncludeXmlComments(xmlPath);
             });
         }
 

@@ -31,7 +31,7 @@ namespace TheWorld.Models
             if(trip != null)
             {
                 trip.Stops.Add(newStop);
-                _context.Add(newStop);
+                _context.Stops.Add(newStop);
             }
         }
         public IEnumerable<Trip> GetAllTrips()

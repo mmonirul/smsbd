@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TheWorld.Models;
+using TheWorld.Services;
 using TheWorld.ViewModels;
 
 namespace TheWorld.Controllers.Api
@@ -15,12 +16,15 @@ namespace TheWorld.Controllers.Api
     {
         private IWorldRepository _worldRepository;
         private ILogger<StopController> _logger;
+        private GeoCoordsService _coordsService;
 
-        public StopController(IWorldRepository worldRepository, ILogger<StopController> logger)
+        public StopController(IWorldRepository worldRepository, ILogger<StopController> logger, GeoCoordsService coordsService)
         {
             _worldRepository = worldRepository;
             _logger = logger;
+            _coordsService = coordsService;
         }
+
         [HttpGet("")]
         public IActionResult Get(string tripName)
         {
@@ -39,16 +43,33 @@ namespace TheWorld.Controllers.Api
         [HttpPost("")]
         public async Task<IActionResult> Post(string tripName, [FromBody] StopViewModel stop)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var newStop = Mapper.Map<Stop>(stop);
-
-                _worldRepository.AddStop(tripName, newStop);
-
-                if (await _worldRepository.SaveChangesAsync())
+                if (ModelState.IsValid)
                 {
-                    return Created($"api/trips/{tripName}/stops/newStop.Name", Mapper.Map<Stop>(newStop));
+                    var newStop = Mapper.Map<Stop>(stop);
+                    GeoCoordsResult geoCoords  = await _coordsService.GetCoordsAsync(newStop.Name);
+                    if (!geoCoords.Success)
+                    {
+                        _logger.LogError(geoCoords.Message);
+                    }
+                    else
+                    {
+                        newStop.Latitude = geoCoords.Latitude;
+                        newStop.Longitude = geoCoords.Longitude;
+
+                        _worldRepository.AddStop(tripName, newStop);
+
+                        if (await _worldRepository.SaveChangesAsync())
+                        {
+                            return Created($"api/trips/{tripName}/stops/newStop.Name", Mapper.Map<Stop>(newStop));
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Failed to save new sotp", ex);
             }
             return BadRequest("Failed to save the trip!");
         }

@@ -27,7 +27,8 @@ namespace TheWorld.Controllers.Api
 
         /// <summary>
         /// Get all trips
-        /// </summary> 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("")]
         [EnableCors("AllowAllOrigins")]
         public IActionResult Get()
