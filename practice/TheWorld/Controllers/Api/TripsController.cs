@@ -24,6 +24,10 @@ namespace TheWorld.Controllers.Api
             _logger = logger;
             _repository = repository;
         }
+
+        /// <summary>
+        /// Get all trips
+        /// </summary> 
         [HttpGet("")]
         [EnableCors("AllowAllOrigins")]
         public IActionResult Get()

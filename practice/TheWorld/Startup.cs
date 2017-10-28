@@ -14,6 +14,7 @@ using Newtonsoft.Json.Serialization;
 using AutoMapper;
 using TheWorld.ViewModels;
 using TheWorld.Common;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace TheWorld
 {
@@ -56,11 +57,21 @@ namespace TheWorld
                         builder.AllowAnyOrigin();
                     });
             });
-            services.AddMvc()
-                .AddJsonOptions(options =>
+            services.AddMvc().AddJsonOptions(options =>
                 {
                     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "Hello world", Version = "v1",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = "None",
+                    Contact = new Contact { Name = "Ami", Email = "", Url = "https://adocka.com/aboutus" },
+                    License = new License { Name = "Use under LICX", Url = "https://example.com/license" }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +94,12 @@ namespace TheWorld
 
             // Shows UseCors with named policy.
             app.UseCors("AllowAllOrigins");
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hello world api V1");
+                c.InjectStylesheet("/swagger/ui/css/custom.css");
+            });
 
             app.UseMvc(config => {
                 config.MapRoute(
