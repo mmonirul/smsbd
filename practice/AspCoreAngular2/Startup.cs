@@ -42,6 +42,7 @@ namespace AspCoreAngular2
             }
 
             app.UseStaticFiles();
+            
 
             app.UseMvc(routes =>
             {
