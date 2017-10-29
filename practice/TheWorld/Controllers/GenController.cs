@@ -49,8 +49,7 @@ namespace TheWorld.Controllers
                 Template = TypeScriptTemplate.JQueryPromises,
                 OperationNameGenerator = new NSwag.CodeGeneration.OperationNameGenerators.MultipleClientsFromPathSegmentsOperationNameGenerator(),
 
-                ClientBaseClass = "base.CoreApiBaseClient",
-                ConfigurationClass = "base.CoreApiConfig",
+
                 ImportRequiredTypes = true,
                 UseTransformOptionsMethod = true,
 
@@ -64,7 +63,7 @@ namespace TheWorld.Controllers
 
             var generator = new SwaggerToTypeScriptClientGenerator(document, settings);
             var code = generator.GenerateFile();
-            code = code.Insert(0, "import * as base from 'services/CoreApiBaseClient';\n");
+           
 
             var webRoot = _env.WebRootPath;
             var file = System.IO.Path.Combine(webRoot, "TsClient/apiclients.ts");

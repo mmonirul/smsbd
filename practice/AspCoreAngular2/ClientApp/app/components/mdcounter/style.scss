@@ -1,0 +1,9 @@
+﻿$font-stack: Helvetica, sans-serif;
+$primary-color: red;
+
+h1 {
+    color: $primary-color;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.051rem rgba(0,123,255,.25) !important;
+}
