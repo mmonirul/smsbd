@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspCoreAngular2", "AspCoreA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorld", "TheWorld\TheWorld.csproj", "{E0104AFD-E00B-413F-ABAC-F3D085102054}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreNgMaterial", "AspCoreAngularMD\AspNetCoreNgMaterial.csproj", "{3C87F569-F40B-490E-B967-503F4FCF602E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0104AFD-E00B-413F-ABAC-F3D085102054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C87F569-F40B-490E-B967-503F4FCF602E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C87F569-F40B-490E-B967-503F4FCF602E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C87F569-F40B-490E-B967-503F4FCF602E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C87F569-F40B-490E-B967-503F4FCF602E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
