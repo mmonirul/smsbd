@@ -8,10 +8,9 @@ export class Fetchdata {
 
     constructor(private http: HttpClient) {
         //this._Http = http;
-        //this.GetData();
+        this.GetData();
     }
-    GetData(data) {
-        console.log(data);
+    GetData() {
         this.http.fetch('/api/SampleData/WeatherForecasts')
             .then(result => result.json() as Promise<IWeatherForecast[]>)
             .then(data => {
